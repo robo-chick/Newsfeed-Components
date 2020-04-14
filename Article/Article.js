@@ -94,6 +94,15 @@ const data = [
     secondParagraph: `The film had an estimated $22.7 million budget, and ultimately grossed $38,119,483 during its run in the United States, taking in $6,613,837 on its opening weekend, finishing behind Dragnet.`,
 
     thirdParagraph: `Spaceballs was developed into an animated television show which debuted in September 2008 as Spaceballs: The Animated Series on G4 (US) and Super Channel (Canada).`
+  },
+  {
+    title: 'My Little Pony!',
+    date: 'April 14, 1983',
+    firstParagraph: `My Pretty Pony is a pony figurine introduced by Hasbro in 1981 that was created by illustrator Bonnie Zacherle and sculptor Charles Muenchinger.`,
+
+    secondParagraph: `In Europe, the main location was renamed Ponyland instead of Friendship Gardens, and were discontinued with the inception of the "G3" toyline in 2003. Many ponies released in the last years of the line are considered rare. A number of playsets were introduced, including a mansion and a castle. Some of the licensed merchandise released in Europe included beanbag plushes, magazines, clothing, perfume, wrapping paper and coloring books. A CD-ROM game for PC, Friendship Gardens, was also released, which involved taking care of a pony and playing games along the way.`,
+
+    thirdParagraph: `Some "Generation Two" ponies were sold as detachable key chains, including Morning Glory, Sundance, Light Heart and Ivy. Each pony comes with a comb attached to her neck by a string. The back of the package says, "My Little Pony Logo and Pony Names are Trademarks of Hasbro Inc. Copyright 1998." They were produced under license by Fun-4-All Corporation and made in China.`
   }
 ];
 
