@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Spaceballs!',
+    date: 'April 14, 2020',
+    firstParagraph: `In 2006, La-La Land Records released Spaceballs - The 19th Anniversary Edition CD of the film's score, with bonus tracks of alternate takes and tracks not used in the film.`,
+
+    secondParagraph: `The film had an estimated $22.7 million budget, and ultimately grossed $38,119,483 during its run in the United States, taking in $6,613,837 on its opening weekend, finishing behind Dragnet.`,
+
+    thirdParagraph: `Spaceballs was developed into an animated television show which debuted in September 2008 as Spaceballs: The Animated Series on G4 (US) and Super Channel (Canada).`
   }
 ];
 
