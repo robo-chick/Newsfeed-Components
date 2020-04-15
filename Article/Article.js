@@ -85,6 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Spaceballs!',
+    date: 'April 14, 2020',
+    firstParagraph: `In 2006, La-La Land Records released Spaceballs - The 19th Anniversary Edition CD of the film's score, with bonus tracks of alternate takes and tracks not used in the film.`,
+
+    secondParagraph: `The film had an estimated $22.7 million budget, and ultimately grossed $38,119,483 during its run in the United States, taking in $6,613,837 on its opening weekend, finishing behind Dragnet.`,
+
+    thirdParagraph: `Spaceballs was developed into an animated television show which debuted in September 2008 as Spaceballs: The Animated Series on G4 (US) and Super Channel (Canada).`
+  },
+  {
+    title: 'My Little Pony!',
+    date: 'April 14, 1983',
+    firstParagraph: `My Pretty Pony is a pony figurine introduced by Hasbro in 1981 that was created by illustrator Bonnie Zacherle and sculptor Charles Muenchinger.`,
+
+    secondParagraph: `In Europe, the main location was renamed Ponyland instead of Friendship Gardens, and were discontinued with the inception of the "G3" toyline in 2003. Many ponies released in the last years of the line are considered rare. A number of playsets were introduced, including a mansion and a castle. Some of the licensed merchandise released in Europe included beanbag plushes, magazines, clothing, perfume, wrapping paper and coloring books. A CD-ROM game for PC, Friendship Gardens, was also released, which involved taking care of a pony and playing games along the way.`,
+
+    thirdParagraph: `Some "Generation Two" ponies were sold as detachable key chains, including Morning Glory, Sundance, Light Heart and Ivy. Each pony comes with a comb attached to her neck by a string. The back of the package says, "My Little Pony Logo and Pony Names are Trademarks of Hasbro Inc. Copyright 1998." They were produced under license by Fun-4-All Corporation and made in China.`
   }
 ];
 
@@ -112,3 +130,69 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function createArticle(object) {
+
+  // article div
+  const article = document.createElement('div');
+  article.classList.add('article', 'article-open');
+
+  // h2 title
+  const title = document.createElement('h2');
+  title.textContent = object.title;
+
+  // date paragraph
+  const date = document.createElement('p');
+  date.classList.add('date');
+  date.textContent = object.date;
+
+  // other paragraphs
+  const firstParagraph = document.createElement('p');
+  firstParagraph.textContent = object.firstParagraph;
+
+  const secondParagraph = document.createElement('p');
+  secondParagraph.textContent = object.secondParagraph;
+
+  const thirdParagraph = document.createElement('p');
+  thirdParagraph.textContent = object.thirdParagraph;
+
+  // button span
+  const buttonExpand = document.createElement('span');
+  buttonExpand.classList.add('expandButton');
+  
+
+  const buttonShrink = document.createElement('span');
+  buttonShrink.classList.add('expandButton', 'hide-btn');
+
+  const read = '\u25bc';
+  buttonExpand.textContent = read;
+
+  const close = '\u25b2';
+  buttonShrink.textContent = close;
+
+  // structure
+
+  article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, buttonExpand);
+
+  article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, buttonExpand, buttonShrink);
+
+  // event listener
+  buttonExpand.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+    buttonExpand.classList.toggle('hide-btn');
+    buttonShrink.classList.toggle('hide-btn');
+  });
+
+  buttonShrink.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+    buttonExpand.classList.toggle('hide-btn');
+    buttonShrink.classList.toggle('hide-btn');
+  })
+      return article;
+}
+
+data.forEach(el => {
+  let createdArticle = createArticle(el);
+  document.querySelector('.articles').appendChild(createdArticle);
+})
+
