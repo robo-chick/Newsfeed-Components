@@ -159,15 +159,35 @@ function createArticle(object) {
   // button span
   const buttonExpand = document.createElement('span');
   buttonExpand.classList.add('expandButton');
-  buttonExpand.textContent = object.buttonExpand;
+  
+
+  const buttonShrink = document.createElement('span');
+  buttonShrink.classList.add('expandButton', 'hide-btn');
+
+  const read = '\u25bc';
+  buttonExpand.textContent = read;
+
+  const close = '\u25b2';
+  buttonShrink.textContent = close;
 
   // structure
+
   article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, buttonExpand);
+
+  article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, buttonExpand, buttonShrink);
 
   // event listener
   buttonExpand.addEventListener('click', () => {
-    article.classList.toggle('article-open')
+    article.classList.toggle('article-open');
+    buttonExpand.classList.toggle('hide-btn');
+    buttonShrink.classList.toggle('hide-btn');
   });
+
+  buttonShrink.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+    buttonExpand.classList.toggle('hide-btn');
+    buttonShrink.classList.toggle('hide-btn');
+  })
       return article;
 }
 
